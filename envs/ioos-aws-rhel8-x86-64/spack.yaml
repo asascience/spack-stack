@@ -1,0 +1,95 @@
+# spack-stack hash: f784298
+# spack hash: 8672dc2b0c
+spack:
+  concretizer:
+    unify: when_possible
+
+  config:
+    install_tree:
+      root: $env/install
+  modules:
+    default:
+      roots:
+        lmod: $env/install/modulefiles
+        tcl: $env/install/modulefiles
+
+  view: false
+  include:
+  - site
+  - common
+
+  specs:
+  - intel-oneapi-compilers@2023.1.0
+  - intel-oneapi-mpi@2021.9.0 arch=linux-rhel8-x86_64
+  compilers:
+  - compiler:
+      spec: gcc@=11.2.1
+      paths:
+        cc: /opt/rh/gcc-toolset-11/root/usr/bin/gcc
+        cxx: /opt/rh/gcc-toolset-11/root/usr/bin/g++
+        f77: /opt/rh/gcc-toolset-11/root/usr/bin/gfortran
+        fc: /opt/rh/gcc-toolset-11/root/usr/bin/gfortran
+      flags: {}
+      operating_system: rhel8
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: gcc@=8.5.0
+      paths:
+        cc: /usr/bin/gcc
+        cxx: /usr/bin/g++
+        f77: null
+        fc: null
+      flags: {}
+      operating_system: rhel8
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: intel@=2021.9.0
+      paths:
+        cc: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/intel64/icc
+        cxx: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/intel64/icpc
+        f77: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/intel64/ifort
+        fc: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/intel64/ifort
+      flags: {}
+      operating_system: rhel8
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: dpcpp@=2023.1.0
+      paths:
+        cc: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/icx
+        cxx: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/dpcpp
+        f77: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/ifx
+        fc: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/ifx
+      flags: {}
+      operating_system: rhel8
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: oneapi@=2023.1.0
+      paths:
+        cc: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/icx
+        cxx: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/icpx
+        f77: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/ifx
+        fc: /mnt/efs/fs1/save/environments/spack-stack/envs/ioos-aws-rhel8-x86-64/install/gcc/11.2.1/intel-oneapi-compilers-2023.1.0-o22ayvl/compiler/2023.1.0/linux/bin/ifx
+      flags: {}
+      operating_system: rhel8
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  packages:
+    all:
+      compiler: [intel@2021.9.0]
+      providers:
+        mpi:
+        - intel-oneapi-mpi
